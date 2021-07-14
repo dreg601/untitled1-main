@@ -1,9 +1,13 @@
 import React from 'react';
+import CarForm from "../components/CarForm";
+import SaleForm from "../components/SaleForm";
 
 const MainPage = () => {
     return (
         <div>
-            MAIN
+            <CarForm/>
+            <p></p>
+            <SaleForm/>
         </div>
     );
 };

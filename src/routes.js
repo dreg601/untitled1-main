@@ -1,36 +1,37 @@
-import {ADMIN_ROUTE, AUTH_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE, START_ROUTE} from "./utils/Consts";
+import {ADMIN_ROUTE, AUTH_ROUTE, MAIN_ROUTE, REG_ROUTE, START_ROUTE} from "./utils/Consts";
 import Admin from "./pages/Admin";
 import MainPage from "./pages/MainPage";
 import Auth from "./pages/Auth";
 import StartPage from "./pages/StartPage";
+import RegPage from "./pages/RegPage";
 
 
 export const AuthRoutes = [
     {
         path: ADMIN_ROUTE,
-        component: Admin,
-    },
-    {
-        path: REGISTRATION_ROUTE,
-        component: "Nothing",
+        Component: Admin,
     },
     {
         path: MAIN_ROUTE,
-        component: MainPage,
+        Component: MainPage,
     },
     {
         path: AUTH_ROUTE,
-        component: Auth,
+        Component: Auth,
+    },
+    {
+        path: START_ROUTE,
+        Component: StartPage,
+    },
+    {
+        path: REG_ROUTE,
+        Component: RegPage,
     }
 ]
 
 export const PublicRoutes = [
     {
         path: AUTH_ROUTE,
-        component: Auth,
+        Component: Auth,
     },
-    {
-        path: START_ROUTE,
-        component: StartPage,
-    }
 ]
