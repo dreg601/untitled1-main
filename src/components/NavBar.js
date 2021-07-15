@@ -6,21 +6,21 @@ import { START_ROUTE} from "../utils/Consts";
 import {observer} from "mobx-react-lite";
 
 const NavBar = observer(() => {
-    const {agent} = useContext(Context)
+    const {user} = useContext(Context)
     return (
         <div>
             <Navbar bg="light" variant="light">
                 <NavLink style={{color: 'black'}} to={START_ROUTE}>Единый реестр страховых карт</NavLink>
-                {agent.isAuth ?
+                {user.isAuth ?
                     <Nav className="ml-auto">
                         <Button>Админ панель</Button>
                         <Button className='ml-2'>Регистрация нового агента</Button>
-                        <Button className='ml-2' onClick={() => agent.setIsAuth(false)}>Выход</Button>
+                        <Button className='ml-2' onClick={() => user.setIsAuth(false)}>Выход</Button>
                     </Nav>
                     :
                     <Nav className="ml-auto">
                         <Button>Стартовая страница</Button>
-                        <Button className='ml-2' onClick={() => agent.setIsAuth(true)}>Вход</Button>
+                        <Button className='ml-2' onClick={() => user.setIsAuth(true)}>Вход</Button>
                     </Nav>
                 }
             </Navbar>

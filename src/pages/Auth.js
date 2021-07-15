@@ -7,8 +7,8 @@ const Auth = () => {
     const [password, setPassword] = useState()
 
     const signUp = async () => {
-        const responce = await login()
-        console.log(responce)
+        const response = await login()
+        console.log(response)
     }
     return (
         <Container
