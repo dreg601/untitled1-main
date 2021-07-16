@@ -9,7 +9,7 @@ console.log(process.env.REACT_APP_API_URL)
 
 ReactDOM.render(
     <Context.Provider value={{
-        user: new UserStore(),
+        agent: new UserStore(),
         sale: new SaleStore()
     }}>
         <App/>

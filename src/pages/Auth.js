@@ -6,10 +6,11 @@ const Auth = () => {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
-    const signUp = async () => {
+    const signIn = async () => {
         const response = await login()
         console.log(response)
     }
+
     return (
         <Container
             className="d-flex justify-content-center align-items-center"
@@ -36,7 +37,7 @@ const Auth = () => {
                     <Button
                         className="mt-4"
                         variant={"outline-primary"}
-                        onClick={signUp}
+                        onClick={signIn}
                     >Авторизация</Button>
                 </Form>
             </Card>
